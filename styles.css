@@ -1,6 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3efe8;
+    background: #e8e4df;
+    color: #2f2f2f;
     margin: 0;
     padding: 0;
 }
@@ -9,6 +10,10 @@ main {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
+}
+
+h1 {
+    text-align: center;
 }
 
 section {
@@ -20,11 +25,7 @@ section {
 }
 
 section:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-h1 {
-    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 form {
@@ -34,9 +35,10 @@ form {
 }
 
 input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d6d2cc;
+    font-size: 14px;
 }
 
 input:focus {
@@ -46,12 +48,13 @@ input:focus {
 
 button {
     margin-top: 10px;
-    padding: 10px;
+    padding: 12px;
     background: #8b5e3c;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 button:hover {
@@ -69,10 +72,6 @@ button:hover {
     border-radius: 8px;
 }
 
-.product-info {
-    margin: 5px 0;
-}
-
 .product-info p:first-child {
     font-weight: 600;
     font-size: 18px;
@@ -81,6 +80,37 @@ button:hover {
 .product-info p:last-child {
     color: #8b5e3c;
     font-weight: 600;
+}
+
+.card-extra {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.card-extra div {
+    display: flex;
+    flex-direction: column;
+}
+
+#expiry {
+    width: 100px;
+}
+
+#cvv {
+    width: 70px;
+}
+
+.card-extra div:first-child {
+    width: 120px;
+}
+
+.card-extra div:last-child {
+    width: 80px;
+}
+
+.card-extra input {
+    width: 100%;
 }
 
 @media (max-width: 600px) {
