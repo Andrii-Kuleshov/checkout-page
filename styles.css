@@ -20,12 +20,13 @@ section {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    transition: box-shadow 0.2s ease;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 section:hover {
-    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 form {
@@ -39,6 +40,7 @@ input {
     border-radius: 6px;
     border: 1px solid #d6d2cc;
     font-size: 14px;
+    cursor: text;
 }
 
 input:focus {
@@ -55,6 +57,7 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 15px;
+    width: 100%;
 }
 
 button:hover {
@@ -82,35 +85,12 @@ button:hover {
     font-weight: 600;
 }
 
-.card-extra {
-    display: flex;
-    gap: 15px;
-    align-items: flex-end;
-}
-
-.card-extra div {
-    display: flex;
-    flex-direction: column;
-}
-
 #expiry {
     width: 100px;
 }
 
 #cvv {
     width: 70px;
-}
-
-.card-extra div:first-child {
-    width: 120px;
-}
-
-.card-extra div:last-child {
-    width: 80px;
-}
-
-.card-extra input {
-    width: 100%;
 }
 
 @media (max-width: 600px) {
@@ -125,4 +105,29 @@ button:hover {
     text-align: center;
   }
 
+}
+
+.card-extra {
+    display: flex;
+    gap: 15px;
+}
+
+.card-extra div {
+    display: flex;
+    flex-direction: column;
+}
+
+#expiry {
+    width: 110px;
+}
+
+#cvv {
+    width: 70px;
+}
+
+.cart-total {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #8b5e3c;
 }
