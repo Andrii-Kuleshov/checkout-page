@@ -29,6 +29,22 @@ section:hover {
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
+/* 🔹 CART */
+
+#order-summary p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#checkout-total {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #8b5e3c;
+}
+
+/* 🔹 FORM */
+
 form {
     display: flex;
     flex-direction: column;
@@ -64,48 +80,7 @@ button:hover {
     background: #6f472c;
 }
 
-.product {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.product img {
-    width: 140px;
-    border-radius: 8px;
-}
-
-.product-info p:first-child {
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.product-info p:last-child {
-    color: #8b5e3c;
-    font-weight: 600;
-}
-
-#expiry {
-    width: 100px;
-}
-
-#cvv {
-    width: 70px;
-}
-
-@media (max-width: 600px) {
-
-  main {
-    margin: 20px;
-    padding: 10px;
-  }
-
-  .product {
-    flex-direction: column;
-    text-align: center;
-  }
-
-}
+/* 🔹 CARD EXTRA */
 
 .card-extra {
     display: flex;
@@ -125,9 +100,11 @@ button:hover {
     width: 70px;
 }
 
-.cart-total {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #8b5e3c;
+/* 🔹 RESPONSIVE */
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px;
+        padding: 10px;
+    }
 }
