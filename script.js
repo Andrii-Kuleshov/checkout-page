@@ -29,3 +29,48 @@ e.target.value = value;
 }
 
 });
+
+const headphonesQty = Number(localStorage.getItem("headphonesQty")) || 0;
+const keyboardQty = Number(localStorage.getItem("keyboardQty")) || 0;
+const mouseQty = Number(localStorage.getItem("mouseQty")) || 0;
+const total = Number(localStorage.getItem("total")) || 0;
+
+const summary = document.getElementById("order-summary");
+const checkoutTotal = document.getElementById("checkout-total");
+
+summary.innerHTML = "";
+
+if (headphonesQty > 0) {
+    summary.innerHTML += `<p>Headphones x${headphonesQty}</p>`;
+}
+
+if (keyboardQty > 0) {
+    summary.innerHTML += `<p>Keyboard x${keyboardQty}</p>`;
+}
+
+if (mouseQty > 0) {
+    summary.innerHTML += `<p>Mouse x${mouseQty}</p>`;
+}
+
+checkoutTotal.textContent = "Total: $" + total;
+
+const backBtn = document.getElementById("back-btn");
+
+backBtn.addEventListener("click", () => {
+    window.location.href = "https://andrii-kuleshov.github.io/mini-store/";
+});
+
+const form = document.getElementById("payment-form");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    alert("Payment successful!");
+
+    localStorage.setItem("headphonesQty", 0);
+    localStorage.setItem("keyboardQty", 0);
+    localStorage.setItem("mouseQty", 0);
+    localStorage.setItem("total", 0);
+
+    window.location.href = "https://andrii-kuleshov.github.io/mini-store/";
+});
