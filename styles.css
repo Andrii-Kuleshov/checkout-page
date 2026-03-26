@@ -29,8 +29,6 @@ section:hover {
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* 🔹 CART */
-
 #order-summary p {
     margin: 5px 0;
     font-size: 16px;
@@ -38,12 +36,12 @@ section:hover {
 
 #checkout-total {
     margin-top: 15px;
-    font-size: 18px;
-    font-weight: 600;
+    padding-top: 10px;
+    border-top: 2px solid #8b5e3c;
+    font-size: 20px;
+    font-weight: bold;
     color: #8b5e3c;
 }
-
-/* 🔹 FORM */
 
 form {
     display: flex;
@@ -80,7 +78,10 @@ button:hover {
     background: #6f472c;
 }
 
-/* 🔹 CARD EXTRA */
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
 
 .card-extra {
     display: flex;
@@ -100,11 +101,74 @@ button:hover {
     width: 70px;
 }
 
-/* 🔹 RESPONSIVE */
-
 @media (max-width: 600px) {
     main {
         margin: 20px;
         padding: 10px;
     }
+}
+
+#thank-you {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#thank-you h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#thank-you p {
+    margin-bottom: 20px;
+}
+
+#thank-you button {
+    width: auto;
+    padding: 10px 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.summary-row span:nth-child(2) {
+    color: #666;
+}
+
+.summary-row span:last-child {
+    font-weight: 600;
+}
+
+.summary-row:hover {
+    background: #f9f9f9;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.summary-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.summary-item p {
+    margin: 0;
+    font-weight: 500;
 }
