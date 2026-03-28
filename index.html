@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mini Store</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Payment Form Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>Mini Store</h1>
+<h1>Credit Card Payment Form</h1>
 <main>
-<section class="products">
-<div class="product-card">
-<h2>Headphones</h2>
-<img src="https://t4.ftcdn.net/jpg/15/76/49/17/360_F_1576491707_BRlf70Njif2rqZaA09emTxipoK81R7e7.jpg" alt="Headphones">
-<p>$199</p>
-<div class="buttons">
-<button class="add-btn" data-price="199" data-product="headphones">+</button>
-<span id="headphones-qty">0</span>
-<button class="remove-btn" data-price="199" data-product="headphones">-</button>
-</div>
-</div>
-<div class="product-card">
-<h2>Keyboard</h2>
-<img src="https://st5.depositphotos.com/1002539/71603/i/450/depositphotos_716034934-stock-photo-modern-wireless-keyboard-white-background.jpg" alt="Keyboard">
-<p>$99</p>
-<div class="buttons">
-<button class="add-btn" data-price="99" data-product="keyboard">+</button>
-<span id="keyboard-qty">0</span>
-<button class="remove-btn" data-price="99" data-product="keyboard">-</button>
-</div>
-</div>
-<div class="product-card">
-<h2>Mouse</h2>
-<img src="https://static4.depositphotos.com/1003420/298/i/450/depositphotos_2984466-stock-photo-white-smooth-mouse.jpg" alt="Mouse">
-<p>$49</p>
-<div class="buttons">
-<button class="add-btn" data-price="49" data-product="mouse">+</button>
-<span id="mouse-qty">0</span>
-<button class="remove-btn" data-price="49" data-product="mouse">-</button>
-</div>
-</div>
-</section>
 <section class="cart">
-<h2>Cart</h2>
-<p id="cart-count">Items: 0</p>
-<p id="cart-total">Total: $0</p>
-<div class="cart-buttons">
-<button id="clear-cart">Clear Cart</button>
-<button id="checkout-btn">Checkout</button>
-</div>
+<h2>Your Cart</h2>
+<div id="order-summary"></div>
+<p id="checkout-total">Total: $0</p>
 </section>
+<section>
+<h2>Payment Information</h2>
+<form id="payment-form">
+  <label for="card-name">Full Name</label>
+  <input id="card-name" name="card-name" type="text" placeholder="Andrii Kuleshov" required>
+
+  <label for="card-number">Card Number</label>
+  <input id="card-number" name="card-number" type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+  <div class="card-extra">
+  <div>
+    <label for="expiry">Expiry Date</label>
+    <input id="expiry" type="text" placeholder="MM/YY" required>
+  </div>
+  <div>
+    <label for="cvv">CVV</label>
+    <input id="cvv" type="text" placeholder="123" maxlength="3" inputmode="numeric" pattern="[0-9]*" required>
+  </div>
+</div>
+<p>Enter a 16-digit card number without spaces.</p>
+<button id="pay-btn" type="submit">Pay Now</button>
+</form>
+<button id="back-btn">Back To Store</button>
+</section>
+<p><a href="https://andrii-kuleshov.github.io/portfolio/">
+  ← Back to Portfolio</a></p>
+<div id="thank-you">
+  <div class="thank-you-box">
+    <h2>Thank you for your purchase!</h2>
+    <p>Your payment was successful.</p>
+    <button id="continue-btn">Back to Store</button>
+  </div>
+</div>
 </main>
 <script src="script.js"></script>
 </body>
