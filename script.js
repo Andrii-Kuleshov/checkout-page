@@ -55,6 +55,12 @@ let total = Number(localStorage.getItem("total")) || 0;
 
 summary.innerHTML = "";
 
+const count = headphonesQty + keyboardQty + mouseQty;
+
+if (count === 0) {
+    summary.innerHTML = "<p>Your cart is empty</p>";
+}
+
 function addItem(name, qty, price) {
 
     if (qty > 0) {
